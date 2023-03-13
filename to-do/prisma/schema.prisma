@@ -15,3 +15,11 @@ model Example {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 }
+
+model Todo {
+    id        String   @id @default(cuid())
+    createdAt DateTime @default(now())
+    uptatedAt DateTime @default(now())
+    text      String
+    done      Boolean  @default(false)
+}
