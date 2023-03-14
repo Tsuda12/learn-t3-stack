@@ -22,8 +22,12 @@ export default function CreateTodo() {
                     const result = todoInput.safeParse(newTodo)
 
                     if(!result.success) {
-                        toast.error(result.error.format()._errors.join('\n'))
+                        alert("Error at create!")
                         return
+                    }
+                    
+                    if(result.success) {
+                        alert("Sucess at create")
                     }
 
                     // Create todo mutation

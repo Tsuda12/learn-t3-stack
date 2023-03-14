@@ -6,7 +6,6 @@ import "~/styles/globals.css";
 import { Toaster } from "react-hot-toast";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  <Toaster />
   return <Component {...pageProps} />;
 };
 
