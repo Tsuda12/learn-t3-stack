@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import CreateTodo from "~/components/CreateTodo";
 import Todos from "~/components/Todos";
 import { api } from "~/utils/api";
 
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
         <h1 className="text-2xl text-white font-bold font-mono ">To Do</h1>
     
         <Todos />
+        <CreateTodo />
       </div>
     </>
   );

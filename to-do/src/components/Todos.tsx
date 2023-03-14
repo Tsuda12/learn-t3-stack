@@ -10,7 +10,7 @@ export default function Todos() {
 
     return(
         <>
-            <div className="bg-slate-800 p-5 text-white rounded mt-10">
+            <div className="bg-slate-800 p-5 text-white rounded mt-10 mb-10">
                 {todos.length ? todos.map(todo => {
                         return <Todo key={todo.id} todo={todo} />
                 }): "Create your first To Do"}
