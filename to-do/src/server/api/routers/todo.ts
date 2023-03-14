@@ -17,9 +17,15 @@ export const todoRouter = createTRPCRouter({
   readAll: publicProcedure
     .query(async ({ ctx }) => {
       const todos = await ctx.prisma.todo.findMany();
-      return console.log("To do:", todos.map(({ id, text, done }) => (
-        { id, text, done }
-      )))
+      // return todos.map(({ id, text, done }) => (
+      //   { id, text, done }
+      // ))
+      return [{
+        id: "1",
+        text: "Testing tRPC tool",
+        done: false
+      }
+    ]
   }),
 
   update: publicProcedure
